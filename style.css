@@ -17,8 +17,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    cursor: none;
-    /* Custom cursor */
+    /* Standard cursor */
+    cursor: auto;
 }
 
 body {
@@ -32,66 +32,58 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Custom Cursor - Lighter, Glowing */
-.cursor-dot {
-    width: 4px;
-    height: 4px;
-    background-color: var(--accent-cyan);
-    border-radius: 50%;
+nav {
     position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 9999;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 15px var(--accent-cyan), 0 0 30px var(--accent-cyan);
-    /* Intense glow */
-    transition: width 0.3s, height 0.3s, background-color 0.3s;
+    top: 2rem;
+    right: 2rem;
+    z-index: 100;
+    background: rgba(11, 15, 26, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.cursor-outline {
-    width: 50px;
-    height: 50px;
-    border: 0.5px solid rgba(0, 243, 255, 0.3);
-    /* Thinner, cyan tinted */
-    border-radius: 50%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 9998;
-    transform: translate(-50%, -50%);
-    background: radial-gradient(circle, rgba(0, 243, 255, 0.03) 0%, transparent 70%);
-    /* Subtle inner light */
-    transition: width 0.3s, height 0.3s, border-color 0.3s;
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
 }
 
-body:hover .cursor-dot {
-    opacity: 1;
+nav a {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    position: relative;
 }
 
-/* Spotlight Effect on Cards */
-.card-spotlight-effect {
-    /* Used by JS to inject a radial gradient */
-    background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
-            rgba(255, 255, 255, 0.06),
-            transparent 40%);
-    z-index: 3;
-    pointer-events: none;
-    /* Let clicks pass through */
+nav a::after {
+    content: '';
     position: absolute;
-    top: 0;
+    bottom: -4px;
     left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    opacity: 0;
-    transition: opacity 0.5s;
+    width: 0;
+    height: 2px;
+    background: var(--accent-cyan);
+    transition: width 0.3s var(--ease-smooth);
 }
 
-.card:hover .card-spotlight-effect {
+nav a:hover {
     opacity: 1;
+    color: #fff;
 }
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Custom Cursor Removed */
+
+
+
 
 /* Typography */
 h1,
@@ -497,10 +489,7 @@ footer {
         font-size: 2.5rem;
     }
 
-    .cursor-dot,
-    .cursor-outline {
-        display: none;
-    }
+
 
     * {
         cursor: auto;
