@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Karthik | Drift</title>
-    <meta name="description" content="Karthik's Personal Portfolio. AIML, DSA, Systems. Building things that don't fall down.">
-    
+    <meta name="description"
+        content="Karthik's Personal Portfolio. AIML, DSA, Systems. Building things that don't fall down.">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+    <!-- Antigravity Background System -->
+    <div class="bg-system" id="bg-system">
+        <!-- Layer 1: Micro Star Field (Noise) - Populated by JS -->
+        <div class="bg-layer bg-noise" id="bg-noise"></div>
+
+        <!-- Layer 2: Computational Fog -->
+        <div class="bg-layer bg-fog" id="bg-fog">
+            <div class="fog-blob fog-1"></div>
+            <div class="fog-blob fog-2"></div>
+        </div>
+
+        <!-- Layer 4: System Overlay (Grid) -->
+        <div class="bg-layer bg-grid" id="bg-grid"></div>
+    </div>
 
     <!-- Custom Cursor -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
-
-    <!-- Background -->
-    <div class="stars"></div>
 
     <!-- Nav (Minimal) -->
     <nav style="position: fixed; top: 2rem; right: 2rem; z-index: 100; mix-blend-mode: difference;">
@@ -32,7 +47,7 @@
     </nav>
 
     <div class="container">
-        
+
         <!-- Hero Section -->
         <section id="hero" class="hero">
             <div class="hero-content floating">
@@ -55,10 +70,12 @@
                 </div>
                 <div>
                     <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem;">
-                        I am Karthik, a Computer Science Engineering student. I focus on foundations—Data Structures, Algorithms, and System Design—because syntax changes, but logic remains.
+                        I am Karthik, a Computer Science Engineering student. I focus on foundations—Data Structures,
+                        Algorithms, and System Design—because syntax changes, but logic remains.
                     </p>
                     <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem;">
-                        Currently exploring the intersection of AI/ML and reliable software systems. I build in public to document the drift from novice to expert.
+                        Currently exploring the intersection of AI/ML and reliable software systems. I build in public
+                        to document the drift from novice to expert.
                     </p>
                     <p style="font-family: monospace; color: var(--accent-cyan); opacity: 0.8;">
                         > Govt. College of Engineering, Kannur
@@ -107,11 +124,12 @@
         <section id="projects">
             <span class="section-title">deployments</span>
             <div class="grid">
-                
+
                 <div class="card floating">
                     <div>
                         <h3>NASA Space Apps</h3>
-                        <p>Detailed analysis and visualization of geomagnetic storms and solar influence. Built for the Space Apps Challenge.</p>
+                        <p>Detailed analysis and visualization of geomagnetic storms and solar influence. Built for the
+                            Space Apps Challenge.</p>
                     </div>
                     <div class="tags">
                         <span class="tag">Data Viz</span>
@@ -123,7 +141,8 @@
                 <div class="card floating-delayed">
                     <div>
                         <h3>TinkerHub Make-a-thon</h3>
-                        <p>Experimental "useless" project designed to push creative boundaries and learn rapid prototyping.</p>
+                        <p>Experimental "useless" project designed to push creative boundaries and learn rapid
+                            prototyping.</p>
                     </div>
                     <div class="tags">
                         <span class="tag">Creative Coding</span>
@@ -134,7 +153,8 @@
                 <div class="card">
                     <div>
                         <h3>Portfolio v1</h3>
-                        <p>This website. A clean, weightless personal space designed to reflect a disciplined mindset.</p>
+                        <p>This website. A clean, weightless personal space designed to reflect a disciplined mindset.
+                        </p>
                     </div>
                     <div class="tags">
                         <span class="tag">Design System</span>
@@ -148,8 +168,9 @@
         <!-- Orbit / Writing Section -->
         <section id="orbit">
             <span class="section-title">Orbit Logic</span>
-            <p style="margin-bottom: 3rem; color: var(--text-muted);">Thoughts, experiments, and unfinished ideas — still floating.</p>
-            
+            <p style="margin-bottom: 3rem; color: var(--text-muted);">Thoughts, experiments, and unfinished ideas —
+                still floating.</p>
+
             <div class="orbit-grid">
                 <a href="https://x.com/K4rthik14" target="_blank" class="orbit-card">
                     <div class="orbit-meta">X / Twitter</div>
@@ -160,7 +181,8 @@
                 <a href="#" class="orbit-card">
                     <div class="orbit-meta">Blog</div>
                     <h4 class="orbit-title">DSA Fundamentals</h4>
-                    <p class="orbit-insight">"Why understanding memory management matters more than framework syntax."</p>
+                    <p class="orbit-insight">"Why understanding memory management matters more than framework syntax."
+                    </p>
                 </a>
 
                 <a href="#" class="orbit-card">
@@ -188,7 +210,7 @@
                 &copy; 2026 Karthik. Still floating.
             </div>
             <div style="margin-top: 1rem; font-size: 0.8rem; color: var(--accent-cyan); opacity: 0.5;">
-                Signal Active
+                Signal Active • <span id="system-time">00:00:00</span>
             </div>
         </footer>
 
@@ -196,4 +218,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
