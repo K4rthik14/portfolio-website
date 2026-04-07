@@ -4,217 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karthik | Drift</title>
+    <title>Karthik | Portfolio</title>
     <meta name="description"
-        content="Karthik's Personal Portfolio. AIML, DSA, Systems. Building things that don't fall down.">
+        content="Karthik - CSE Student, AI/ML & Systems Enthusiast. Focused on building high-performance systems and intelligent algorithms.">
 
-    <!-- Fonts -->
+    <!-- Google Fonts: Outfit -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="cursor-glow"></div>
 
-    <!-- Antigravity Background System -->
-    <div class="bg-system" id="bg-system">
-        <!-- Layer 1: Micro Star Field (Noise) - Populated by JS -->
-        <div class="bg-layer bg-noise" id="bg-noise"></div>
-
-        <!-- Layer 2: Computational Fog -->
-        <div class="bg-layer bg-fog" id="bg-fog">
-            <div class="fog-blob fog-1"></div>
-            <div class="fog-blob fog-2"></div>
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <a href="#" class="logo">K.</a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Work</a>
+                <a href="#contact" class="btn-primary">Connect</a>
+            </div>
         </div>
-
-        <!-- Layer 4: System Overlay (Grid) -->
-        <div class="bg-layer bg-grid" id="bg-grid"></div>
-    </div>
-
-    <!-- Custom Cursor Removed -->
-
-
-    <!-- Nav (Enhanced) -->
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Work</a></li>
-            <li><a href="#orbit">Orbit</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
     </nav>
 
-    <div class="container">
-
+    <main>
         <!-- Hero Section -->
         <section id="hero" class="hero">
-            <div class="hero-content floating">
-                <div class="hero-sub">
-                    <span>AIML</span> • <span>System Design</span> • <span>Performance</span>
-                </div>
-                <h1>I build things<br>that don't fall down.</h1>
-            </div>
-            <div class="scroll-indicator">
-                Entry Orbit &darr;
-            </div>
-        </section>
-
-        <!-- About Section -->
-        <section id="about">
-            <span class="section-title">Identity</span>
-            <div class="grid" style="grid-template-columns: 1fr 1fr; align-items: start;">
-                <div class="floating-delayed">
-                    <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Early in career,<br>Serious in intent.</h2>
-                </div>
-                <div>
-                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem;">
-                        I am Karthik, a Computer Science Engineering student. I focus on foundations—Data Structures,
-                        Algorithms, and System Design—because syntax changes, but logic remains.
+            <div class="container">
+                <div class="hero-wrapper">
+                    <span class="badge">Available for Collaboration</span>
+                    <h1 class="hero-title">
+                        Crafting <span class="gradient-text">Intelligent</span> <br>
+                        Digital Experiences.
+                    </h1>
+                    <p class="hero-desc">
+                        Hi, I'm <strong>Karthik</strong>. A Computer Science Engineer passionate about building
+                        scalable systems and exploring the frontiers of Machine Learning.
                     </p>
-                    <p style="color: var(--text-muted); font-size: 1.1rem; margin-bottom: 2rem;">
-                        Currently exploring the intersection of AI/ML and reliable software systems. I build in public
-                        to document the drift from novice to expert.
-                    </p>
-                    <p style="font-family: monospace; color: var(--accent-cyan); opacity: 0.8;">
-                        > Govt. College of Engineering, Kannur
-                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn-primary">View Projects</a>
+                        <a href="#about" class="btn-outline">Learn More</a>
+                    </div>
                 </div>
+            </div>
+
+            <div class="hero-background">
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+                <div class="blob blob-3"></div>
             </div>
         </section>
-
-        <!-- Focus / Skills Section -->
-        <section id="skills">
-            <span class="section-title">Capabilities</span>
-            <div class="grid">
-                <div class="card">
-                    <h3>Core Engineering</h3>
-                    <p>Building robust backends and understanding system architecture.</p>
-                    <div class="tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">C++</span>
-                        <span class="tag">Java</span>
-                        <span class="tag">DSA</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>Frontend Systems</h3>
-                    <p>Crafting responsive, accessible, and performant interfaces.</p>
-                    <div class="tags">
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">React</span>
-                        <span class="tag">HTML5/CSS3</span>
-                        <span class="tag">Git</span>
-                    </div>
-                </div>
-                <div class="card">
-                    <h3>Intelligence</h3>
-                    <p>Exploring the mathematical foundations of learning algorithms.</p>
-                    <div class="tags">
-                        <span class="tag">Python (NumPy/Pandas)</span>
-                        <span class="tag">ML Concepts</span>
-                        <span class="tag">Data Analysis</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects">
-            <span class="section-title">deployments</span>
-            <div class="grid">
-
-                <div class="card floating">
-                    <div>
-                        <h3>NASA Space Apps</h3>
-                        <p>Visualized geomagnetic storm data to predict solar influence. Resulted in a 40% improvement
-                            in data readability for researchers.</p>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Data Viz</span>
-                        <span class="tag">Research</span>
-                        <span class="tag">Hackathon</span>
-                    </div>
-                </div>
-
-                <div class="card floating-delayed">
-                    <div>
-                        <h3>TinkerHub Make-a-thon</h3>
-                        <p>Rapidly prototyped a creative coding experiment under 24 hours. Explored limits of browser
-                            rendering performance.</p>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Creative Coding</span>
-                        <span class="tag">Prototyping</span>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div>
-                        <h3>Portfolio v1</h3>
-                        <p>This website. A clean, weightless personal space designed to reflect a disciplined mindset.
-                        </p>
-                    </div>
-                    <div class="tags">
-                        <span class="tag">Design System</span>
-                        <span class="tag">Antigravity</span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Orbit / Writing Section -->
-        <section id="orbit">
-            <span class="section-title">Orbit Logic</span>
-            <p style="margin-bottom: 3rem; color: var(--text-muted);">Thoughts, experiments, and unfinished ideas —
-                still floating.</p>
-
-            <div class="orbit-grid">
-                <a href="https://x.com/K4rthik14" target="_blank" class="orbit-card">
-                    <div class="orbit-meta">X / Twitter</div>
-                    <h4 class="orbit-title">Vibecoding & Systems</h4>
-                    <p class="orbit-insight">"Consistency is the only algorithm that never deprecates."</p>
-                </a>
-
-                <a href="#" class="orbit-card">
-                    <div class="orbit-meta">Blog</div>
-                    <h4 class="orbit-title">DSA Fundamentals</h4>
-                    <p class="orbit-insight">"Why understanding memory management matters more than framework syntax."
-                    </p>
-                </a>
-
-                <a href="#" class="orbit-card">
-                    <div class="orbit-meta">Note</div>
-                    <h4 class="orbit-title">Learning in Public</h4>
-                    <p class="orbit-insight">"Documenting the failures is just as important as shipping the wins."</p>
-                </a>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact">
-            <span class="section-title">Signal</span>
-            <h2 style="font-size: 3rem; margin-bottom: 2rem;">Establish Uplink.</h2>
-            <div class="contact-links">
-                <a href="mailto:karthik@example.com" class="contact-link">Email</a>
-                <a href="https://www.linkedin.com/in/karthik-saya" class="contact-link" target="_blank">LinkedIn</a>
-                <a href="https://x.com/K4rthik14" class="contact-link" target="_blank">X (Twitter)</a>
-                <a href="https://github.com/K4rthik14" class="contact-link" target="_blank">GitHub</a>
-            </div>
-        </section>
-
-        <footer>
-            <div class="footer-copy">
-                &copy; 2026 Karthik. Still floating.
-            </div>
-            <div style="margin-top: 1rem; font-size: 0.8rem; color: var(--accent-cyan); opacity: 0.5;">
-                Signal Active • <span id="system-time">00:00:00</span>
-            </div>
-        </footer>
-
-    </div>
+    </main>
 
     <script src="script.js"></script>
 </body>
