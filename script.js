@@ -23,12 +23,12 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('fade-in');
+            entry.target.classList.add('visible');
         }
     });
 }, observerOptions);
 
-// Add animation classes to sections as they are built
-document.querySelectorAll('section').forEach(section => {
-    observer.observe(section);
+// Add animation classes to segments as they are built
+document.querySelectorAll('.fade-in').forEach(el => {
+    observer.observe(el);
 });
