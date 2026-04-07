@@ -15,20 +15,28 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Simple Entry Animations
+// Staggered Entry Animations
 const observerOptions = {
-    threshold: 0.1
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
 };
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('visible');
+
+            // If the entry has children with .stagger-in, reveal them with a delay
+            const children = entry.target.querySelectorAll('.stagger-in');
+            children.forEach((child, index) => {
+                setTimeout(() => {
+                    child.classList.add('visible');
+                }, index * 100);
+            });
         }
     });
 }, observerOptions);
 
-// Add animation classes to segments as they are built
 document.querySelectorAll('.fade-in').forEach(el => {
     observer.observe(el);
 });

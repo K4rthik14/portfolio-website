@@ -330,6 +330,17 @@ body {
     transform: translateY(0);
 }
 
+.stagger-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stagger-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @keyframes move {
     from {
         transform: translate(0, 0) rotate(0deg);
