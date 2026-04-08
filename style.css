@@ -625,6 +625,93 @@ body {
     font-size: 0.85rem;
 }
 
+/* Resume Section (Experience & Education) */
+.resume-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.resume-items {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.resume-item {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.resume-item:hover {
+    transform: translateX(10px);
+    border-color: var(--primary);
+}
+
+.resume-date {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+.resume-org {
+    font-weight: 600;
+    color: var(--text-main);
+    margin-bottom: 0.5rem;
+}
+
+.resume-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.2rem;
+}
+
+.resume-item p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* Achievements Section */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+}
+
+.achievement-card {
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+}
+
+.achievement-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.achievement-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-main);
+}
+
+.achievement-card p {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+@media (max-width: 968px) {
+    .resume-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}
+
 @media (max-width: 968px) {
     .about-grid {
         grid-template-columns: 1fr;
