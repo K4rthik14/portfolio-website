@@ -312,7 +312,7 @@
                             </div>
                             <div class="project-links">
                                 <a href="https://github.com/K4rthik14" target="_blank">View Code</a>
-                                <a href="#">Live Demo</a>
+                                <button class="btn-insight" data-project="circuitguard">System Insight</button>
                             </div>
                         </div>
                     </div>
@@ -343,7 +343,7 @@
                             </div>
                             <div class="project-links">
                                 <a href="https://github.com/K4rthik14" target="_blank">View Code</a>
-                                <a href="#">Live Demo</a>
+                                <button class="btn-insight" data-project="dayflow">System Insight</button>
                             </div>
                         </div>
                     </div>
@@ -374,7 +374,7 @@
                             </div>
                             <div class="project-links">
                                 <a href="https://github.com/K4rthik14" target="_blank">View Code</a>
-                                <a href="#">Technical Doc</a>
+                                <button class="btn-insight" data-project="pipeline">System Insight</button>
                             </div>
                         </div>
                     </div>
@@ -405,7 +405,7 @@
                             </div>
                             <div class="project-links">
                                 <a href="https://github.com/K4rthik14" target="_blank">View Code</a>
-                                <a href="#">Live Tool</a>
+                                <button class="btn-insight" data-project="fraud">System Insight</button>
                             </div>
                         </div>
                     </div>
@@ -551,6 +551,25 @@
             </div>
         </div>
     </footer>
+
+    <!-- System Insight Modal -->
+    <div id="insight-modal" class="modal">
+        <div class="modal-content glass">
+            <div class="modal-header">
+                <div class="terminal-dots">
+                    <span class="dot red"></span>
+                    <span class="dot yellow"></span>
+                    <span class="dot green"></span>
+                </div>
+                <span class="modal-title">System_Log_Insight.sh</span>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body terminal-body">
+                <div id="typewriter-output"></div>
+                <span class="terminal-cursor">|</span>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
