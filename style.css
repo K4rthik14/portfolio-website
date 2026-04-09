@@ -539,6 +539,43 @@ body {
     margin-bottom: 1.5rem;
 }
 
+.project-desc-wrapper {
+    margin-bottom: 1.5rem;
+}
+
+.project-desc-wrapper p {
+    font-size: 0.9rem;
+    line-height: 1.5 !important;
+    margin-bottom: 0.6rem;
+    color: var(--text-muted);
+}
+
+.project-desc-wrapper strong {
+    color: var(--secondary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-right: 0.5rem;
+}
+
+.project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-stack span {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.2rem 0.7rem;
+    background: rgba(139, 92, 246, 0.1);
+    color: var(--primary);
+    border-radius: 6px;
+    border: 1px solid rgba(139, 92, 246, 0.2);
+    text-transform: uppercase;
+}
+
 .project-links {
     display: flex;
     gap: 1.5rem;
