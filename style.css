@@ -794,10 +794,61 @@ body {
     color: var(--text-muted);
 }
 
+.achievement-card strong {
+    color: var(--primary);
+}
+
+/* GitHub Stats */
+.github-stats-wrapper {
+    margin-top: 6rem;
+}
+
+.github-stats {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.stats-info h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.stats-info p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.stats-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.stats-visual img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
 @media (max-width: 968px) {
     .resume-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
+    }
+}
+
+@media (max-width: 968px) {
+    .github-stats {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    .stats-visual {
+        order: -1;
     }
 }
 
