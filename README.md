@@ -1,4 +1,4 @@
-# Premium Developer Portfolio (Systems & AI)
+# Developer Portfolio (Systems & AI)
 
 A high-performance, recruiter-ready developer portfolio built with a focus on **Systems Engineering** and **Agentic AI**. This project implements a premium dark-themed interface with glassmorphism aesthetics and custom interactive features.
 
