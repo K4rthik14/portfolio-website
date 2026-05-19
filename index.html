@@ -4,14 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karthik | Portfolio</title>
-    <meta name="description"
-        content="Karthik - CSE Student, AI/ML & Systems Enthusiast. Focused on building high-performance systems and intelligent algorithms.">
+    <title>Karthik S | Systems & AI Engineer</title>
+    <meta name="description" content="Karthik S — B.Tech CSE student at GCEK. Building at the intersection of Computer Architecture, Agentic AI, and Deep Learning. Open to internships.">
+    <meta name="theme-color" content="#09090b">
 
-    <!-- Google Fonts: Outfit -->
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Karthik S | Systems & AI Engineer">
+    <meta property="og:description" content="Portfolio of Karthik S — CSE student building AI agents and low-level systems.">
+    <meta property="og:url" content="https://k4rthik14.github.io/portfolio-website/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:creator" content="@K4rthik14">
+    <meta name="twitter:title" content="Karthik S | Systems & AI Engineer">
+    <meta name="twitter:description" content="Portfolio of Karthik S — CSE student building AI agents and low-level systems.">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://k4rthik14.github.io/portfolio-website/">
+
+    <!-- Favicon (inline SVG data URI — no extra file needed) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>K</text></svg>">
+
+    <!-- Google Fonts: Outfit + Space Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -22,14 +40,17 @@
     <nav class="glass-nav">
         <div class="nav-content">
             <a href="#" class="logo">K.</a>
-            <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#resume">Resume</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Work</a>
-                <a href="#achievements">Awards</a>
-                <a href="#contact" class="btn-primary">Connect</a>
+            <div class="nav-links" id="nav-links">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#resume" class="nav-link">Resume</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Work</a>
+                <a href="#achievements" class="nav-link">Awards</a>
+                <a href="#contact" class="btn-primary nav-cta">Connect</a>
             </div>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
@@ -546,8 +567,15 @@
                     <a href="#projects">Work</a>
                     <a href="#contact">Contact</a>
                 </div>
+                <div class="footer-socials">
+                    <a href="https://github.com/K4rthik14" target="_blank" aria-label="GitHub">GitHub</a>
+                    <span class="footer-divider">·</span>
+                    <a href="https://linkedin.com/in/karthik-saya" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+                    <span class="footer-divider">·</span>
+                    <a href="https://x.com/K4rthik14" target="_blank" aria-label="X / Twitter">X</a>
+                </div>
                 <div class="footer-copy">
-                    &copy; 2026 Karthik. Built from scratch with &hearts;
+                    &copy; 2026 Karthik S. Built from scratch &mdash; no frameworks, just craft.
                 </div>
             </div>
         </div>

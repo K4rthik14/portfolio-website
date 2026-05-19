@@ -15,6 +15,48 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Hamburger Mobile Menu
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('open');
+});
+
+// Close mobile menu when a nav link is clicked
+navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+    });
+});
+
+// Close mobile menu on Escape
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+    }
+});
+
+// Active Nav Link Highlighting
+const sections = document.querySelectorAll('section[id]');
+const navLinkEls = document.querySelectorAll('.nav-link');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            navLinkEls.forEach(l => l.classList.remove('active'));
+            const active = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+            if (active) active.classList.add('active');
+        }
+    });
+}, { threshold: 0.4 });
+
+sections.forEach(s => sectionObserver.observe(s));
+
+
 // Staggered Entry Animations
 const observerOptions = {
     threshold: 0.1,
