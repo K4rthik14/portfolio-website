@@ -1,10 +1,3 @@
-// Mouse Glow Effect
-const cursorGlow = document.querySelector('.cursor-glow');
-document.addEventListener('mousemove', (e) => {
-    cursorGlow.style.left = e.clientX + 'px';
-    cursorGlow.style.top = e.clientY + 'px';
-});
-
 // Navbar Scroll Effect
 const nav = document.querySelector('.glass-nav');
 window.addEventListener('scroll', () => {
@@ -73,7 +66,7 @@ const observer = new IntersectionObserver((entries) => {
             children.forEach((child, index) => {
                 setTimeout(() => {
                     child.classList.add('visible');
-                }, index * 100);
+                }, index * 80);
             });
         }
     });
@@ -102,7 +95,7 @@ function typeWriter(text, i = 0) {
     if (i < text.length) {
         typewriterOutput.innerHTML += text.charAt(i) === '\n' ? '<br>' : text.charAt(i);
         i++;
-        typewriterInterval = setTimeout(() => typeWriter(text, i), 20);
+        typewriterInterval = setTimeout(() => typeWriter(text, i), 18);
     }
 }
 
@@ -116,7 +109,7 @@ insightButtons.forEach(button => {
         modal.classList.add('active');
 
         // Start typing after a short modal opening delay
-        setTimeout(() => typeWriter(text), 400);
+        setTimeout(() => typeWriter(text), 300);
     });
 });
 
