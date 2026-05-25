@@ -85,8 +85,7 @@ const insightButtons = document.querySelectorAll('.btn-insight');
 const insights = {
     circuitguard: "Initializing CNN backbone... \nLoading pre-trained weights for PCB defect localization... \nInput Resolution: 1024x1024 \nAnalysis of 500+ manufacturing samples complete. \n[LOG] Bottleneck identified in edge-case noise filtering. \n[SUCCESS] Optimized via Dynamic Thresholding & Morphological closing. \nAccuracy: 98%. Ready for production deployment.",
     devlogger: "Bootstrapping LangGraph ReAct Agent... \nLoading GitPython diff retriever tool... \n[LOG] Scanning commit history for structured change patterns... \n[TOOL_CALL] get_git_diff → 14 commits analyzed. \n[REASONING] Categorizing changes: feature, fix, refactor... \nRouting to Groq LLM for markdown summary generation... \n[SUCCESS] Dev log generated in 1.2s. Zero manual effort. \nInstallable via pipx. Agent: ACTIVE.",
-    pipeline: "Parsing GEM5 trace logs for 5-stage classic RISC... \nGenerating Hazard Matrix... \n[LOG] Data dependency detected at ID/EX stage (R1 -> R1). \n[ANALYSIS] Structural bottleneck at MEM/WB stage during high-velocity branch prediction. \n[SUGGESTION] Implementing improved Load-Store unit scheduling to mitigate stalls. \nSimulation: COMPLETE.",
-    fraud: "Vectorizing corpus (N=10,000)... \nTF-IDF Matrix Density: 0.15 \nTraining Random Forest Ensemble (100 estimators)... \n[LOG] Suspicious pattern detected in Header-Auth-Spoofing. \n[RESULT] F1-Score: 0.95. False Positive Rate minimized to 2%. \nDeployment: STABLE."
+    pipeline: "Parsing GEM5 trace logs for 5-stage classic RISC... \nGenerating Hazard Matrix... \n[LOG] Data dependency detected at ID/EX stage (R1 -> R1). \n[ANALYSIS] Structural bottleneck at MEM/WB stage during high-velocity branch prediction. \n[SUGGESTION] Implementing improved Load-Store unit scheduling to mitigate stalls. \nSimulation: COMPLETE."
 };
 
 let typewriterInterval;
