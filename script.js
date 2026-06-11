@@ -1,6 +1,6 @@
 // ── Scroll-reveal animations ──
 const revealElements = document.querySelectorAll(
-  '.hero-content, .about-card, .about-body, .work-card, .stack-category, .exp-row, .stat-card, .award-row'
+  '.hero-content, .about-card, .about-body, .current-work-header, .current-work-body, .work-card, .stack-category, .exp-row, .stat-card, .award-row'
 );
 
 const revealObserver = new IntersectionObserver((entries) => {
