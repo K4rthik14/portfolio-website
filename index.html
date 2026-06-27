@@ -3,528 +3,723 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#09090b">
-  
-  <title>Karthik — Builder Portfolio</title>
-  <meta name="description" content="Karthik — Student and Founding AI Engineer at a stealth startup. Building computer vision infrastructure, agentic workflows, and reliable backend systems.">
+  <meta name="theme-color" content="#06080d">
+
+  <title>Karthik — The Architect's Console</title>
+  <meta name="description" content="Enter the mind of an AI engineer. Explore missions, systems, and transmissions from Karthik's command center.">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Karthik — Builder Portfolio">
-  <meta property="og:description" content="A student who is becoming an exceptional builder. Discover the workshop, system designs, and build logs.">
+  <meta property="og:title" content="Karthik — The Architect's Console">
+  <meta property="og:description" content="An immersive portfolio experience. Discover the systems, missions, and engineering philosophy of a builder.">
   <meta property="og:url" content="https://k4rthik14.github.io/portfolio-website/">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Karthik — Builder Portfolio">
-  <meta name="twitter:description" content="A student who is becoming an exceptional builder. Discover the workshop, system designs, and build logs.">
+  <meta name="twitter:title" content="Karthik — The Architect's Console">
+  <meta name="twitter:description" content="An immersive portfolio experience. Discover the systems, missions, and engineering philosophy of a builder.">
 
   <!-- Canonical -->
   <link rel="canonical" href="https://k4rthik14.github.io/portfolio-website/">
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23f4f4f5'>K</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%232dd4bf'>K</text></svg>">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <header>
-    <nav class="nav-container">
-      <div class="nav-brand">
-        <a href="#intro">Karthik</a>
+  <!-- ═══ ATMOSPHERIC CANVAS ═══ -->
+  <canvas id="atmosphere-canvas" aria-hidden="true"></canvas>
+  <div class="scan-lines" aria-hidden="true"></div>
+
+  <!-- ═══ BOOT SEQUENCE ═══ -->
+  <div id="boot-screen" role="status" aria-label="System initializing">
+    <div class="boot-content">
+      <div class="boot-logo">
+        <span class="boot-logo-bracket">[</span>
+        <span class="boot-logo-text">K</span>
+        <span class="boot-logo-bracket">]</span>
       </div>
-      <ul class="nav-links">
-        <li><a href="#now">Now</a></li>
-        <li><a href="#workshop">Workshop</a></li>
-        <li><a href="#journal">Journal</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="mailto:codewithkarthii@gmail.com" class="nav-contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="main-content">
-    
-    <!-- Hero / Intro -->
-    <section id="intro" class="section-intro">
-      <div class="intro-headline">
-        <h1>Designing systems that keep working long after I close my laptop.</h1>
+      <div class="boot-terminal" id="boot-terminal" aria-live="polite"></div>
+      <div class="boot-progress">
+        <div class="boot-progress-bar" id="boot-progress-bar"></div>
       </div>
-      <div class="intro-text">
-        <p>
-          I am a Computer Science student at Government College of Engineering, Kannur, and a Founding AI Engineer at a stealth startup. I spend my time building real-time computer vision pipelines, multi-agent systems, and backend services.
-        </p>
-        <p>
-          I value simplicity, systems-level understanding, and writing code that lasts. I don't collect projects; I build to solve real bottlenecks and learn how systems behave under stress.
-        </p>
-      </div>
-    </section>
-
-    <!-- Now Section (Exploring, Reading, Obsession) -->
-    <section id="now" class="section-now">
-      <div class="section-header">
-        <span class="section-number">01 //</span>
-        <h2>Now</h2>
-      </div>
-      <div class="now-grid">
-        <div class="now-card">
-          <h3>Engineering Obsession</h3>
-          <p>
-            Optimizing multi-stream RTSP frame processing queues. Minimizing CPU-to-GPU transfer latency and preventing queue bottlenecks when handling concurrent camera streams under high frame-rates.
-          </p>
-        </div>
-        <div class="now-card">
-          <h3>Currently Exploring</h3>
-          <ul>
-            <li>Low-latency model inference engines (TensorRT, ONNX Runtime)</li>
-            <li>Distributed consensus protocols and replication schemes</li>
-            <li>Local-first web database architectures</li>
-          </ul>
-        </div>
-        <div class="now-card">
-          <h3>On the Bookshelf</h3>
-          <ul>
-            <li><em>Designing Data-Intensive Applications</em> — Martin Kleppmann (studying partitioning & replication)</li>
-            <li><em>Operating Systems: Three Easy Pieces</em> — Remzi H. Arpaci-Dusseau</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- The Workshop (Projects) -->
-    <section id="workshop" class="section-workshop">
-      <div class="section-header">
-        <span class="section-number">02 //</span>
-        <h2>The Workshop</h2>
-        <p class="section-subtitle">A collection of systems built to explore specific engineering constraints. Architecture and lessons over screenshots.</p>
-      </div>
-
-      <div class="project-list">
-
-        <!-- Project 1: CircuitGuard -->
-        <article class="project-entry">
-          <div class="project-meta">
-            <span class="project-year">2024</span>
-            <span class="project-tags">PyTorch · EfficientNet-B4 · OpenCV</span>
-          </div>
-          <h3 class="project-title">
-            CircuitGuard <span class="project-desc-short">— PCB Defect Detection System</span>
-          </h3>
-          
-          <div class="project-diagram">
-            <div class="diagram-title">System Architecture</div>
-            <pre class="ascii-diagram">
-[Raw PCB Image] --> [OpenCV Preprocessing]
-                           |
-                           v (Denoise & Align)
-                    [Patch Extraction] (Sliding Window / YOLO crop)
-                           |
-                           v
-                    [EfficientNet-B4 Backbone]
-                           |
-                           v
-                    [Defect Classifier] --> (Pass / Fail / Defect Class)
-                           |
-                           +--> [Inference Benchmark: ~45ms / board]</pre>
-          </div>
-
-          <div class="project-story">
-            <div class="story-block">
-              <h4>The Problem</h4>
-              <p>Automating visual defect inspection on printed circuit boards. Solder defects, micro-cracks, and missing surface-mount components are difficult to detect reliably under changing manufacturing line lights and camera angles.</p>
-            </div>
-            <div class="story-block">
-              <h4>The Approach & decisions</h4>
-              <p>Instead of building a simple flat classifier, I split the system into preprocessing and deep-feature extraction. OpenCV handles deskewing and histogram equalization to normalize the input. An EfficientNet-B4 backbone extracts fine structural features, which are then passed to a localized classification head.</p>
-            </div>
-            <div class="story-block">
-              <h4>The Hard Part</h4>
-              <p>Severe class imbalance. Normal solder joints are abundant; short-circuits and missing resistors are rare. Standard cross-entropy caused the model to ignore critical defects. I resolved this by applying weighted cross-entropy loss, using a custom Focal Loss implementation, and generating synthetic training examples using OpenCV patch-grafting.</p>
-            </div>
-            <div class="story-block">
-              <h4>The Lessons</h4>
-              <p>Learned that image alignment and noise reduction in preprocessing are more valuable than stacking additional neural layers. Normalizing structural orientation before the model forward pass reduced validation error by 4.2%.</p>
-            </div>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/K4rthik14" target="_blank" rel="noreferrer" class="proj-link">Code Repository &rarr;</a>
-          </div>
-        </article>
-
-        <!-- Project 2: dev-logger-agent -->
-        <article class="project-entry">
-          <div class="project-meta">
-            <span class="project-year">2025</span>
-            <span class="project-tags">LangGraph · ReAct · PyPI</span>
-          </div>
-          <h3 class="project-title">
-            dev-logger-agent <span class="project-desc-short">— Autonomous CLI Dev-Log Generator</span>
-          </h3>
-
-          <div class="project-diagram">
-            <div class="diagram-title">System Architecture</div>
-            <pre class="ascii-diagram">
-[Git Commit History] --> [Parser / Diffs Extractor]
-                                |
-                                v (Raw Markdown Diffs)
-                        [LangGraph Agent Loop] <--- State Manager
-                                |
-        +-----------------------+-----------------------+
-        |                       |                       |
-        v                       v                       v
-[Change Categorizer]     [Impact Scorer]        [Markdown Formatter]
-        |                       |                       |
-        +-----------------------+-----------------------+
-                                |
-                                v
-                       [Formatted Dev Log]</pre>
-          </div>
-
-          <div class="project-story">
-            <div class="story-block">
-              <h4>The Problem</h4>
-              <p>Traditional commit messages lack the structural context required to generate human-readable engineering logs. I wanted a tool that would parse raw git diffs, reason about the code adjustments, and output a clean, categorized change log automatically.</p>
-            </div>
-            <div class="story-block">
-              <h4>The Approach & decisions</h4>
-              <p>I built the parser as a CLI tool in Python and packaged it for PyPI. The core analysis engine is designed as a stateful LangGraph agent using the ReAct pattern. The agent breaks down massive diffs into manageable chunks, determines the scope of the edits, and incrementally builds a structured markdown document.</p>
-            </div>
-            <div class="story-block">
-              <h4>The Hard Part</h4>
-              <p>LLM context windows and token cost when parsing large refactoring commits. To prevent context overflow, I wrote a pre-filtering parser in Python that strips out non-code changes (like formatting, whitespace-only modifications, and lockfile updates) before sending the payload to the LLM agent.</p>
-            </div>
-            <div class="story-block">
-              <h4>The Lessons</h4>
-              <p>Learned how to design robust, state-based LLM architectures using LangGraph. Explicit state transitions are much easier to debug than free-form agent prompts.</p>
-            </div>
-          </div>
-          <div class="project-links">
-            <a href="https://pypi.org/project/dev-logger-agent/" target="_blank" rel="noreferrer" class="proj-link">View on PyPI &rarr;</a>
-            <span class="link-sep">/</span>
-            <a href="https://github.com/K4rthik14" target="_blank" rel="noreferrer" class="proj-link">Code &rarr;</a>
-          </div>
-        </article>
-
-        <!-- Project 3: askmy-notes -->
-        <article class="project-entry">
-          <div class="project-meta">
-            <span class="project-year">2025</span>
-            <span class="project-tags">FastAPI · ChromaDB · LangChain</span>
-          </div>
-          <h3 class="project-title">
-            askmy-notes <span class="project-desc-short">— Conversational RAG Pipeline</span>
-          </h3>
-
-          <div class="project-diagram">
-            <div class="diagram-title">System Architecture</div>
-            <pre class="ascii-diagram">
-[PDF/Notes Ingestion] --> [Text Chunker (Recursive Character)]
-                                  |
-                                  v
-                       [Embedding Model (MiniLM-L6)]
-                                  |
-                                  v
-                        [ChromaDB Vector Store]
-                                  ^
-                                  | (Cosine Similarity Query)
-[User Query] --> [FastAPI Backend] --> [LLM (Gemini/OpenAI)] --> [Answer]</pre>
-          </div>
-
-          <div class="project-story">
-            <div class="story-block">
-              <h4>The Problem</h4>
-              <p>Standard RAG implementations suffer from retrieval noise when scanning long lecture notes and complex textbooks. Relevant context gets lost in translation, resulting in hallucinated responses.</p>
-            </div>
-            <div class="story-block">
-              <h4>The Approach & decisions</h4>
-              <p>I architected a modular retrieval pipeline using FastAPI and ChromaDB. For chunking, I chose a recursive character splitter with strict token-size overlaps. I used a local MiniLM model for fast vector embeddings, sending context-enriched payloads to LLMs for final generation.</p>
-            </div>
-            <div class="story-block">
-              <h4>The Hard Part</h4>
-              <p>Handling multi-page tables and math equations in PDF notes. Standard text splitters split tables mid-row, destroying tabular integrity. I solved this by implementing a heuristic table-parser that extracts tables as Markdown blocks and treats them as single, cohesive chunks with high retrieval weights.</p>
-            </div>
-            <div class="story-block">
-              <h4>The Lessons</h4>
-              <p>Data parsing is 90% of RAG success. A simple LLM with clean, structured context easily outperforms a state-of-the-art model fed with noisy, half-broken data segments.</p>
-            </div>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/K4rthik14" target="_blank" rel="noreferrer" class="proj-link">Code Repository &rarr;</a>
-          </div>
-        </article>
-
-        <!-- Project 4: karsh -->
-        <article class="project-entry">
-          <div class="project-meta">
-            <span class="project-year">2024</span>
-            <span class="project-tags">C · Unix Systems · POSIX</span>
-          </div>
-          <h3 class="project-title">
-            karsh <span class="project-desc-short">— Custom Unix Shell</span>
-          </h3>
-
-          <div class="project-diagram">
-            <div class="diagram-title">System Architecture</div>
-            <pre class="ascii-diagram">
-[User Input] --> [Lexer (Tokenization)]
-                        |
-                        v
-                 [Parser (AST Generation)]
-                        |
-                        v
-           [Command Executor (fork() & execvp())]
-                        |
-       +----------------+----------------+
-       |                                 |
-       v (Pipes & Redirection)           v (Signal Handling)
-[dup2() File Descriptors]         [SIGINT & SIGTSTP Traps]</pre>
-          </div>
-
-          <div class="project-story">
-            <div class="story-block">
-              <h4>The Problem</h4>
-              <p>I wanted to understand how operating systems manage processes, allocate file descriptors, and route input/output streams at the system call level.</p>
-            </div>
-            <div class="story-block">
-              <h4>The Approach & decisions</h4>
-              <p>I wrote a complete Unix shell in C from scratch, adhering to POSIX standards. The codebase features a custom lexer/parser, an execution loop using `fork()` and `execvp()`, and low-level file descriptor mapping via `dup2()` for I/O redirection and pipe chaining.</p>
-            </div>
-            <div class="story-block">
-              <h4>The Hard Part</h4>
-              <p>Process isolation and cleaning up zombie processes. When chaining multiple commands using pipes (e.g., `cat file.txt | grep error | wc -l`), managing background jobs and handling terminal control signals (`SIGINT`, `SIGTSTP`) was incredibly difficult. I resolved it by implementing strict signal traps and structured `waitpid()` sweeps inside a clean execution loop.</p>
-            </div>
-            <div class="story-block">
-              <h4>The Lessons</h4>
-              <p>Debugging file descriptor leaks taught me to be extremely disciplined with resource management. Every open file descriptor must have a clear close path, or the system will quickly run out of handles under sustained use.</p>
-            </div>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/K4rthik14" target="_blank" rel="noreferrer" class="proj-link">Code Repository &rarr;</a>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-    <!-- Builder Journal -->
-    <section id="journal" class="section-journal">
-      <div class="section-header">
-        <span class="section-number">03 //</span>
-        <h2>Builder Journal</h2>
-        <p class="section-subtitle">A chronological log of my engineering journey, experiments, readings, and rebuilds.</p>
-      </div>
-
-      <div class="timeline">
-        
-        <div class="timeline-item">
-          <div class="timeline-date">Jun 2026</div>
-          <div class="timeline-content">
-            <h3>Benchmarking Inference Latency on Edge Devices</h3>
-            <p>
-              Tuning YOLOv8 model inference latency for multi-camera streams in our stealth startup's surveillance backend. Benchmarked TensorRT vs ONNX Runtime on NVIDIA T4; saw a 2.4x throughput increase.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">May 2026</div>
-          <div class="timeline-content">
-            <h3>Data Partitions & Replication Lag</h3>
-            <p>
-              Read chapters 5 and 6 of <em>Designing Data-Intensive Applications</em>. Spent the weekend analyzing how replica lag manifests as stale reads in eventual consistency models and how to mitigate it at the API layer.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Apr 2026</div>
-          <div class="timeline-content">
-            <h3>Testing LangGraph Rollbacks</h3>
-            <p>
-              Wrote a custom script to automate testing of LangGraph state machine rollback features. Ensured that if an external API tool fails, the agent cleanly reverts to the last stable state checkpoint instead of crashing.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Mar 2026</div>
-          <div class="timeline-content">
-            <h3>Publishing dev-logger-agent to PyPI</h3>
-            <p>
-              Released `dev-logger-agent` CLI tool on PyPI. Designed its ReAct agent loop using LangGraph to parse and classify git diffs automatically. Handled edge cases where files are deleted or renamed in git history.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Jan 2026</div>
-          <div class="timeline-content">
-            <h3>Organizing Build with AI Hackathon</h3>
-            <p>
-              Organized the "Build with AI — Kannur 2026" hackathon (50+ participants) through µLearn GCEK. Managed event flow, set up developer challenges, and helped coordinate mentorship.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Nov 2024</div>
-          <div class="timeline-content">
-            <h3>Pipe Redirection & FD Leaks in C</h3>
-            <p>
-              Finished `karsh`, a custom Unix shell in C. Spent three days debugging file descriptor leaks in the pipe-chaining mechanism (`|`). Taught me the value of systematic logging and tracing syscalls with `strace`.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-date">Jul 2024</div>
-          <div class="timeline-content">
-            <h3>Infosys Internship & CircuitGuard</h3>
-            <p>
-              Built `CircuitGuard` for Infosys Springboard internship. Benchmarked ResNet-50 vs EfficientNet-B4 on PCB defect datasets. Selected as National Finalist at IIM Indore.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Experience & Education -->
-    <section id="experience" class="section-experience">
-      <div class="section-header">
-        <span class="section-number">04 //</span>
-        <h2>Experience &amp; Certifications</h2>
-      </div>
-
-      <div class="experience-list">
-        
-        <div class="experience-item">
-          <div class="exp-header">
-            <span class="exp-duration">2025 — Present</span>
-            <h3>Founding AI Engineer</h3>
-            <span class="exp-org">Stealth AI Startup</span>
-          </div>
-          <div class="exp-body">
-            <p>Architecting real-time computer vision pipelines processing 10+ RTSP camera streams concurrently. Designing low-latency object detection and occupancy analytics engines using YOLOv8 and ByteTrack. Implementing asynchronous FastAPI endpoints and Redis queues to stream real-time analytics to clients.</p>
-          </div>
-        </div>
-
-        <div class="experience-item">
-          <div class="exp-header">
-            <span class="exp-duration">2025 — Present</span>
-            <h3>Campus Co-Lead</h3>
-            <span class="exp-org">µLearn GCEK · Kannur</span>
-          </div>
-          <div class="exp-body">
-            <p>Spearheading technical community operations and leading the organization of "Build with AI - Kannur 2026" hackathon (50+ participants).</p>
-          </div>
-        </div>
-
-        <div class="experience-item">
-          <div class="exp-header">
-            <span class="exp-duration">2024</span>
-            <h3>AI/ML Intern</h3>
-            <span class="exp-org">Infosys Springboard · Remote</span>
-          </div>
-          <div class="exp-body">
-            <p>Developed CircuitGuard — an automated PCB defect detection system using EfficientNet-B4 and OpenCV. Trained on manufacturing imagery across 6 defect categories, achieving 98% accuracy. Selected as national finalist at IIM Indore hackathon.</p>
-          </div>
-        </div>
-
-        <div class="experience-item">
-          <div class="exp-header">
-            <span class="exp-duration">2023 — Present</span>
-            <h3>B.Tech Computer Science</h3>
-            <span class="exp-org">Government College of Engineering, Kannur</span>
-          </div>
-          <div class="exp-body">
-            <p>Focusing on operating systems, computer architecture, databases, and algorithm analysis.</p>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="certifications-block">
-        <h3>Recognition &amp; Credentials</h3>
-        <ul class="certs-list">
-          <li>
-            <span class="cert-year">2026</span>
-            <span class="cert-name">AWS AI &amp; ML Scholars Program</span>
-            <span class="cert-status">Active Participant</span>
-          </li>
-          <li>
-            <span class="cert-year">2025</span>
-            <span class="cert-name">Google × Kaggle AI Agents Intensive</span>
-            <span class="cert-status">Capstone Project (Dayflow Agent)</span>
-          </li>
-          <li>
-            <span class="cert-year">2025</span>
-            <span class="cert-name">Snowflake BUILD Asia Pacific</span>
-            <span class="cert-status">Selected Participant</span>
-          </li>
-          <li>
-            <span class="cert-year">2024</span>
-            <span class="cert-name">National Hackathon Finalist</span>
-            <span class="cert-status">IIM Indore (CircuitGuard)</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Technical Stack -->
-    <section id="stack" class="section-stack">
-      <div class="section-header">
-        <span class="section-number">05 //</span>
-        <h2>Technical Stack</h2>
-      </div>
-      <div class="stack-grid-minimal">
-        <div class="stack-col">
-          <h3>Languages &amp; Core</h3>
-          <p>Python, C, POSIX Shell, SQL</p>
-        </div>
-        <div class="stack-col">
-          <h3>AI &amp; Computer Vision</h3>
-          <p>PyTorch, OpenCV, YOLOv8, ByteTrack, EfficientNet, HuggingFace</p>
-        </div>
-        <div class="stack-col">
-          <h3>Backend &amp; Vectors</h3>
-          <p>FastAPI, ChromaDB, PostgreSQL, Redis, LangGraph, LangChain</p>
-        </div>
-        <div class="stack-col">
-          <h3>Infrastructure</h3>
-          <p>Linux, Docker, Git, GitHub Actions, AWS</p>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Footer / Contact -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-cta">
-        <h2>Have a hard engineering problem? Let's talk.</h2>
-        <a href="mailto:codewithkarthii@gmail.com" class="footer-email">codewithkarthii@gmail.com</a>
-      </div>
-      <div class="footer-meta">
-        <div class="footer-meta-left">
-          <span>Karthik · Kasaragod, Kerala</span>
-        </div>
-        <div class="footer-meta-right">
-          <a href="https://github.com/K4rthik14" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://linkedin.com/in/karthik-k4" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
-      </div>
+      <button class="boot-skip" id="boot-skip" aria-label="Skip boot sequence">SKIP ▸</button>
     </div>
-  </footer>
+  </div>
 
+  <!-- ═══ CONSOLE HUD ═══ -->
+  <div id="console-wrapper" class="console-hidden">
+
+    <!-- Navigation HUD -->
+    <header id="console-hud" role="navigation" aria-label="Main navigation">
+      <nav class="hud-nav">
+        <div class="hud-brand">
+          <span class="hud-bracket">[</span>
+          <a href="#module-operator" class="hud-brand-text">KARTHIK</a>
+          <span class="hud-bracket">]</span>
+          <span class="hud-version">v2.0</span>
+        </div>
+        <ul class="hud-modules" id="hud-modules">
+          <li><a href="#module-operator" class="hud-module-link active" data-module="operator">
+            <span class="module-indicator"></span>OPERATOR
+          </a></li>
+          <li><a href="#module-missions" class="hud-module-link" data-module="missions">
+            <span class="module-indicator"></span>MISSIONS
+          </a></li>
+          <li><a href="#module-signals" class="hud-module-link" data-module="signals">
+            <span class="module-indicator"></span>SIGNALS
+          </a></li>
+          <li><a href="#module-systems" class="hud-module-link" data-module="systems">
+            <span class="module-indicator"></span>SYSTEMS
+          </a></li>
+          <li><a href="#module-transmission" class="hud-module-link" data-module="transmission">
+            <span class="module-indicator"></span>COMMS
+          </a></li>
+        </ul>
+        <div class="hud-status">
+          <span class="status-dot"></span>
+          <span class="status-text" id="hud-status-text">ONLINE</span>
+        </div>
+        <!-- Mobile hamburger -->
+        <button class="hud-hamburger" id="hud-hamburger" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+      <!-- Status bar -->
+      <div class="hud-statusbar">
+        <span class="statusbar-item" id="statusbar-module">MODULE: OPERATOR</span>
+        <span class="statusbar-item">LOCATION: 12.5°N 75.0°E</span>
+        <span class="statusbar-item" id="statusbar-time"></span>
+      </div>
+    </header>
+
+    <!-- Mobile navigation overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay">
+      <ul class="mobile-nav-links">
+        <li><a href="#module-operator" class="mobile-nav-link" data-module="operator">// OPERATOR</a></li>
+        <li><a href="#module-missions" class="mobile-nav-link" data-module="missions">// MISSIONS</a></li>
+        <li><a href="#module-signals" class="mobile-nav-link" data-module="signals">// SIGNALS</a></li>
+        <li><a href="#module-systems" class="mobile-nav-link" data-module="systems">// SYSTEMS</a></li>
+        <li><a href="#module-transmission" class="mobile-nav-link" data-module="transmission">// COMMS</a></li>
+      </ul>
+    </div>
+
+    <!-- ═══ MAIN CONTENT ═══ -->
+    <main id="console-main" role="main">
+
+      <!-- ── MODULE: OPERATOR ── -->
+      <section id="module-operator" class="console-module" aria-label="Operator profile">
+        <div class="module-container">
+          
+          <!-- Module Header -->
+          <div class="module-header">
+            <div class="module-label">
+              <span class="module-number">01</span>
+              <span class="module-separator">//</span>
+              <span class="module-name">OPERATOR PROFILE</span>
+            </div>
+            <div class="module-line"></div>
+          </div>
+
+          <!-- Operator Dossier -->
+          <div class="operator-dossier">
+            <div class="dossier-card">
+              <div class="dossier-header">
+                <div class="dossier-classification">CLASSIFICATION: BUILDER</div>
+                <div class="dossier-status"><span class="pulse-dot"></span>ACTIVE</div>
+              </div>
+              <h1 class="dossier-name">Karthik</h1>
+              <div class="dossier-designation">Founding AI Engineer · Stealth Startup</div>
+              <div class="dossier-location">
+                <span class="coord-label">LOC</span>
+                <span class="coord-value">Kasaragod, Kerala, IN</span>
+              </div>
+              <div class="dossier-affiliation">
+                <span class="coord-label">EDU</span>
+                <span class="coord-value">B.Tech CS · Government College of Engineering, Kannur</span>
+              </div>
+            </div>
+
+            <div class="dossier-briefing">
+              <div class="briefing-header">
+                <span class="briefing-marker">▸</span> BRIEFING
+              </div>
+              <p class="briefing-text">
+                Designing systems that keep working long after I close my laptop.
+              </p>
+              <p class="briefing-detail">
+                I spend my time building real-time computer vision pipelines, multi-agent systems, and backend services. I value simplicity, systems-level understanding, and writing code that lasts. I don't collect projects — I build to solve real bottlenecks and learn how systems behave under stress.
+              </p>
+            </div>
+          </div>
+
+          <!-- Now / Active Readouts -->
+          <div class="operator-readouts">
+            <div class="readout-card reveal-element">
+              <div class="readout-header">
+                <span class="readout-icon">◆</span>
+                <span class="readout-title">ENGINEERING OBSESSION</span>
+              </div>
+              <p class="readout-content">
+                Optimizing multi-stream RTSP frame processing queues. Minimizing CPU-to-GPU transfer latency and preventing queue bottlenecks when handling concurrent camera streams under high frame-rates.
+              </p>
+            </div>
+            <div class="readout-card reveal-element">
+              <div class="readout-header">
+                <span class="readout-icon">◆</span>
+                <span class="readout-title">CURRENTLY EXPLORING</span>
+              </div>
+              <ul class="readout-list">
+                <li>Low-latency model inference engines (TensorRT, ONNX Runtime)</li>
+                <li>Distributed consensus protocols and replication schemes</li>
+                <li>Local-first web database architectures</li>
+              </ul>
+            </div>
+            <div class="readout-card reveal-element">
+              <div class="readout-header">
+                <span class="readout-icon">◆</span>
+                <span class="readout-title">ON THE BOOKSHELF</span>
+              </div>
+              <ul class="readout-list">
+                <li><em>Designing Data-Intensive Applications</em> — Martin Kleppmann (studying partitioning & replication)</li>
+                <li><em>Operating Systems: Three Easy Pieces</em> — Remzi H. Arpaci-Dusseau</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── MODULE: MISSIONS ── -->
+      <section id="module-missions" class="console-module" aria-label="Project missions">
+        <div class="module-container">
+
+          <div class="module-header">
+            <div class="module-label">
+              <span class="module-number">02</span>
+              <span class="module-separator">//</span>
+              <span class="module-name">MISSION DOSSIERS</span>
+            </div>
+            <div class="module-line"></div>
+            <p class="module-subtitle">Systems built to explore specific engineering constraints. Architecture and lessons over screenshots.</p>
+          </div>
+
+          <div class="missions-list">
+
+            <!-- Mission 1: CircuitGuard -->
+            <article class="mission-dossier reveal-element" id="mission-circuitguard">
+              <div class="mission-header" role="button" tabindex="0" aria-expanded="false" aria-controls="mission-circuitguard-content">
+                <div class="mission-meta">
+                  <span class="mission-date">2024</span>
+                  <span class="mission-classification">PyTorch · EfficientNet-B4 · OpenCV</span>
+                </div>
+                <div class="mission-title-row">
+                  <h2 class="mission-title">CircuitGuard</h2>
+                  <span class="mission-subtitle">PCB Defect Detection System</span>
+                  <span class="mission-expand-icon" aria-hidden="true">+</span>
+                </div>
+                <div class="mission-objective">Automated visual defect inspection on printed circuit boards using deep learning and computer vision preprocessing.</div>
+              </div>
+              <div class="mission-content" id="mission-circuitguard-content" hidden>
+                <div class="mission-architecture">
+                  <div class="arch-header">SYSTEM ARCHITECTURE</div>
+                  <pre class="arch-diagram">
+[Raw PCB Image] ──▸ [OpenCV Preprocessing]
+                           │
+                           ▾ (Denoise & Align)
+                    [Patch Extraction] (Sliding Window / YOLO crop)
+                           │
+                           ▾
+                    [EfficientNet-B4 Backbone]
+                           │
+                           ▾
+                    [Defect Classifier] ──▸ (Pass / Fail / Defect Class)
+                           │
+                           └──▸ [Inference Benchmark: ~45ms / board]</pre>
+                </div>
+                <div class="mission-briefing-grid">
+                  <div class="briefing-block">
+                    <h3>OBJECTIVE</h3>
+                    <p>Automating visual defect inspection on printed circuit boards. Solder defects, micro-cracks, and missing surface-mount components are difficult to detect reliably under changing manufacturing line lights and camera angles.</p>
+                  </div>
+                  <div class="briefing-block">
+                    <h3>APPROACH</h3>
+                    <p>Instead of building a simple flat classifier, I split the system into preprocessing and deep-feature extraction. OpenCV handles deskewing and histogram equalization to normalize the input. An EfficientNet-B4 backbone extracts fine structural features, which are then passed to a localized classification head.</p>
+                  </div>
+                  <div class="briefing-block">
+                    <h3>COMPLICATIONS</h3>
+                    <p>Severe class imbalance. Normal solder joints are abundant; short-circuits and missing resistors are rare. Standard cross-entropy caused the model to ignore critical defects. I resolved this by applying weighted cross-entropy loss, using a custom Focal Loss implementation, and generating synthetic training examples using OpenCV patch-grafting.</p>
+                  </div>
+                  <div class="briefing-block">
+                    <h3>DEBRIEF</h3>
+                    <p>Learned that image alignment and noise reduction in preprocessing are more valuable than stacking additional neural layers. Normalizing structural orientation before the model forward pass reduced validation error by 4.2%.</p>
+                  </div>
+                </div>
+                <div class="mission-links">
+                  <a href="https://github.com/K4rthik14" target="_blank" rel="noreferrer" class="mission-link">CODE REPOSITORY <span class="link-arrow">→</span></a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Mission 2: dev-logger-agent -->
+            <article class="mission-dossier reveal-element" id="mission-devlogger">
+              <div class="mission-header" role="button" tabindex="0" aria-expanded="false" aria-controls="mission-devlogger-content">
+                <div class="mission-meta">
+                  <span class="mission-date">2025</span>
+                  <span class="mission-classification">LangGraph · ReAct · PyPI</span>
+                </div>
+                <div class="mission-title-row">
+                  <h2 class="mission-title">dev-logger-agent</h2>
+                  <span class="mission-subtitle">Autonomous CLI Dev-Log Generator</span>
+                  <span class="mission-expand-icon" aria-hidden="true">+</span>
+                </div>
+                <div class="mission-objective">A stateful LangGraph agent that parses git diffs, reasons about code changes, and outputs structured engineering logs automatically.</div>
+              </div>
+              <div class="mission-content" id="mission-devlogger-content" hidden>
+                <div class="mission-architecture">
+                  <div class="arch-header">SYSTEM ARCHITECTURE</div>
+                  <pre class="arch-diagram">
+[Git Commit History] ──▸ [Parser / Diffs Extractor]
+                                │
+                                ▾ (Raw Markdown Diffs)
+                        [LangGraph Agent Loop] ◂── State Manager
+                                │
+        ┌───────────────────────┼───────────────────────┐
+        │                       │                       │
+        ▾                       ▾                       ▾
+[Change Categorizer]     [Impact Scorer]        [Markdown Formatter]
+        │                       │                       │
+        └───────────────────────┼───────────────────────┘
+                                │
+                                ▾
+                       [Formatted Dev Log]</pre>
+                </div>
+                <div class="mission-briefing-grid">
+                  <div class="briefing-block">
+                    <h3>OBJECTIVE</h3>
+                    <p>Traditional commit messages lack the structural context required to generate human-readable engineering logs. I wanted a tool that would parse raw git diffs, reason about the code adjustments, and output a clean, categorized change log automatically.</p>
+                  </div>
+                  <div class="briefing-block">
+                    <h3>APPROACH</h3>
+                    <p>I built the parser as a CLI tool in Python and packaged it for PyPI. The core analysis engine is designed as a stateful LangGraph agent using the ReAct pattern. The agent breaks down massive diffs into manageable chunks, determines the scope of the edits, and incrementally builds a structured markdown document.</p>
+                  </div>
+                  <div class="briefing-block">
+                    <h3>COMPLICATIONS</h3>
+                    <p>LLM context windows and token cost when parsing large refactoring commits. To prevent context overflow, I wrote a pre-filtering parser in Python that strips out non-code changes (like formatting, whitespace-only modifications, and lockfile updates) before sending the payload to the LLM agent.</p>
+                  </div>
+                  <div class="briefing-block">
+                    <h3>DEBRIEF</h3>
+                    <p>Learned how to design robust, state-based LLM architectures using LangGraph. Explicit state transitions are much easier to debug than free-form agent prompts.</p>
+                  </div>
+                </div>
+                <div class="mission-links">
+                  <a href="https://pypi.org/project/dev-logger-agent/" target="_blank" rel="noreferrer" class="mission-link">VIEW ON PYPI <span class="link-arrow">→</span></a>
+                  <span class="link-divider">/</span>
+                  <a href="https://github.com/K4rthik14" target="_blank" rel="noreferrer" class="mission-link">CODE <span class="link-arrow">→</span></a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Mission 3: askmy-notes -->
+            <article class="mission-dossier reveal-element" id="mission-askmynotes">
+              <div class="mission-header" role="button" tabindex="0" aria-expanded="false" aria-controls="mission-askmynotes-content">
+                <div class="mission-meta">
+                  <span class="mission-date">2025</span>
+                  <span class="mission-classification">FastAPI · ChromaDB · LangChain</span>
+                </div>
+                <div class="mission-title-row">
+                  <h2 class="mission-title">askmy-notes</h2>
+                  <span class="mission-subtitle">Conversational RAG Pipeline</span>
+                  <span class="mission-expand-icon" aria-hidden="true">+</span>
+                </div>
+                <div class="mission-objective">A modular retrieval-augmented generation pipeline that answers questions from personal notes and lecture documents with high-fidelity context.</div>
+              </div>
+              <div class="mission-content" id="mission-askmynotes-content" hidden>
+                <div class="mission-architecture">
+                  <div class="arch-header">SYSTEM ARCHITECTURE</div>
+                  <pre class="arch-diagram">
+[PDF/Notes Ingestion] ──▸ [Text Chunker (Recursive Character)]
+                                  │
+                                  ▾
+                       [Embedding Model (MiniLM-L6)]
+                                  │
+                                  ▾
+                        [ChromaDB Vector Store]
+                                  ▲
+                                  │ (Cosine Similarity Query)
+[User Query] ──▸ [FastAPI Backend] ──▸ [LLM (Gemini/OpenAI)] ──▸ [Answer]</pre>
+                </div>
+                <div class="mission-briefing-grid">
+                  <div class="briefing-block">
+                    <h3>OBJECTIVE</h3>
+                    <p>Standard RAG implementations suffer from retrieval noise when scanning long lecture notes and complex textbooks. Relevant context gets lost in translation, resulting in hallucinated responses.</p>
+                  </div>
+                  <div class="briefing-block">
+                    <h3>APPROACH</h3>
+                    <p>I architected a modular retrieval pipeline using FastAPI and ChromaDB. For chunking, I chose a recursive character splitter with strict token-size overlaps. I used a local MiniLM model for fast vector embeddings, sending context-enriched payloads to LLMs for final generation.</p>
+                  </div>
+                  <div class="briefing-block">
+                    <h3>COMPLICATIONS</h3>
+                    <p>Handling multi-page tables and math equations in PDF notes. Standard text splitters split tables mid-row, destroying tabular integrity. I solved this by implementing a heuristic table-parser that extracts tables as Markdown blocks and treats them as single, cohesive chunks with high retrieval weights.</p>
+                  </div>
+                  <div class="briefing-block">
+                    <h3>DEBRIEF</h3>
+                    <p>Data parsing is 90% of RAG success. A simple LLM with clean, structured context easily outperforms a state-of-the-art model fed with noisy, half-broken data segments.</p>
+                  </div>
+                </div>
+                <div class="mission-links">
+                  <a href="https://github.com/K4rthik14" target="_blank" rel="noreferrer" class="mission-link">CODE REPOSITORY <span class="link-arrow">→</span></a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Mission 4: karsh -->
+            <article class="mission-dossier reveal-element" id="mission-karsh">
+              <div class="mission-header" role="button" tabindex="0" aria-expanded="false" aria-controls="mission-karsh-content">
+                <div class="mission-meta">
+                  <span class="mission-date">2024</span>
+                  <span class="mission-classification">C · Unix Systems · POSIX</span>
+                </div>
+                <div class="mission-title-row">
+                  <h2 class="mission-title">karsh</h2>
+                  <span class="mission-subtitle">Custom Unix Shell</span>
+                  <span class="mission-expand-icon" aria-hidden="true">+</span>
+                </div>
+                <div class="mission-objective">A complete Unix shell written in C from scratch — lexer, parser, execution engine, pipe chaining, I/O redirection, and signal handling.</div>
+              </div>
+              <div class="mission-content" id="mission-karsh-content" hidden>
+                <div class="mission-architecture">
+                  <div class="arch-header">SYSTEM ARCHITECTURE</div>
+                  <pre class="arch-diagram">
+[User Input] ──▸ [Lexer (Tokenization)]
+                        │
+                        ▾
+                 [Parser (AST Generation)]
+                        │
+                        ▾
+           [Command Executor (fork() & execvp())]
+                        │
+       ┌────────────────┴────────────────┐
+       │                                 │
+       ▾ (Pipes & Redirection)           ▾ (Signal Handling)
+[dup2() File Descriptors]         [SIGINT & SIGTSTP Traps]</pre>
+                </div>
+                <div class="mission-briefing-grid">
+                  <div class="briefing-block">
+                    <h3>OBJECTIVE</h3>
+                    <p>I wanted to understand how operating systems manage processes, allocate file descriptors, and route input/output streams at the system call level.</p>
+                  </div>
+                  <div class="briefing-block">
+                    <h3>APPROACH</h3>
+                    <p>I wrote a complete Unix shell in C from scratch, adhering to POSIX standards. The codebase features a custom lexer/parser, an execution loop using fork() and execvp(), and low-level file descriptor mapping via dup2() for I/O redirection and pipe chaining.</p>
+                  </div>
+                  <div class="briefing-block">
+                    <h3>COMPLICATIONS</h3>
+                    <p>Process isolation and cleaning up zombie processes. When chaining multiple commands using pipes, managing background jobs and handling terminal control signals (SIGINT, SIGTSTP) was incredibly difficult. I resolved it by implementing strict signal traps and structured waitpid() sweeps inside a clean execution loop.</p>
+                  </div>
+                  <div class="briefing-block">
+                    <h3>DEBRIEF</h3>
+                    <p>Debugging file descriptor leaks taught me to be extremely disciplined with resource management. Every open file descriptor must have a clear close path, or the system will quickly run out of handles under sustained use.</p>
+                  </div>
+                </div>
+                <div class="mission-links">
+                  <a href="https://github.com/K4rthik14" target="_blank" rel="noreferrer" class="mission-link">CODE REPOSITORY <span class="link-arrow">→</span></a>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ── MODULE: SIGNALS ── -->
+      <section id="module-signals" class="console-module" aria-label="Signal timeline">
+        <div class="module-container">
+
+          <div class="module-header">
+            <div class="module-label">
+              <span class="module-number">03</span>
+              <span class="module-separator">//</span>
+              <span class="module-name">SIGNAL LOG</span>
+            </div>
+            <div class="module-line"></div>
+            <p class="module-subtitle">A chronological record of engineering transmissions — builds, studies, experiments, and deployments.</p>
+          </div>
+
+          <!-- Signal Timeline -->
+          <div class="signal-timeline">
+            <div class="signal-line" aria-hidden="true"></div>
+
+            <div class="signal-entry reveal-element">
+              <div class="signal-node" aria-hidden="true"></div>
+              <div class="signal-timestamp">JUN 2026</div>
+              <div class="signal-body">
+                <div class="signal-type">BUILD LOG</div>
+                <h3 class="signal-title">Benchmarking Inference Latency on Edge Devices</h3>
+                <p class="signal-content">Tuning YOLOv8 model inference latency for multi-camera streams in our stealth startup's surveillance backend. Benchmarked TensorRT vs ONNX Runtime on NVIDIA T4; saw a 2.4x throughput increase.</p>
+              </div>
+            </div>
+
+            <div class="signal-entry reveal-element">
+              <div class="signal-node" aria-hidden="true"></div>
+              <div class="signal-timestamp">MAY 2026</div>
+              <div class="signal-body">
+                <div class="signal-type">STUDY</div>
+                <h3 class="signal-title">Data Partitions & Replication Lag</h3>
+                <p class="signal-content">Read chapters 5 and 6 of <em>Designing Data-Intensive Applications</em>. Spent the weekend analyzing how replica lag manifests as stale reads in eventual consistency models and how to mitigate it at the API layer.</p>
+              </div>
+            </div>
+
+            <div class="signal-entry reveal-element">
+              <div class="signal-node" aria-hidden="true"></div>
+              <div class="signal-timestamp">APR 2026</div>
+              <div class="signal-body">
+                <div class="signal-type">BUILD LOG</div>
+                <h3 class="signal-title">Testing LangGraph Rollbacks</h3>
+                <p class="signal-content">Wrote a custom script to automate testing of LangGraph state machine rollback features. Ensured that if an external API tool fails, the agent cleanly reverts to the last stable state checkpoint instead of crashing.</p>
+              </div>
+            </div>
+
+            <div class="signal-entry reveal-element">
+              <div class="signal-node" aria-hidden="true"></div>
+              <div class="signal-timestamp">MAR 2026</div>
+              <div class="signal-body">
+                <div class="signal-type">DEPLOYMENT</div>
+                <h3 class="signal-title">Publishing dev-logger-agent to PyPI</h3>
+                <p class="signal-content">Released dev-logger-agent CLI tool on PyPI. Designed its ReAct agent loop using LangGraph to parse and classify git diffs automatically. Handled edge cases where files are deleted or renamed in git history.</p>
+              </div>
+            </div>
+
+            <div class="signal-entry reveal-element">
+              <div class="signal-node" aria-hidden="true"></div>
+              <div class="signal-timestamp">JAN 2026</div>
+              <div class="signal-body">
+                <div class="signal-type">EVENT</div>
+                <h3 class="signal-title">Organizing Build with AI Hackathon</h3>
+                <p class="signal-content">Organized the "Build with AI — Kannur 2026" hackathon (50+ participants) through µLearn GCEK. Managed event flow, set up developer challenges, and helped coordinate mentorship.</p>
+              </div>
+            </div>
+
+            <div class="signal-entry reveal-element">
+              <div class="signal-node" aria-hidden="true"></div>
+              <div class="signal-timestamp">NOV 2024</div>
+              <div class="signal-body">
+                <div class="signal-type">BUILD LOG</div>
+                <h3 class="signal-title">Pipe Redirection & FD Leaks in C</h3>
+                <p class="signal-content">Finished karsh, a custom Unix shell in C. Spent three days debugging file descriptor leaks in the pipe-chaining mechanism. Taught me the value of systematic logging and tracing syscalls with strace.</p>
+              </div>
+            </div>
+
+            <div class="signal-entry reveal-element">
+              <div class="signal-node" aria-hidden="true"></div>
+              <div class="signal-timestamp">JUL 2024</div>
+              <div class="signal-body">
+                <div class="signal-type">DEPLOYMENT</div>
+                <h3 class="signal-title">Infosys Internship & CircuitGuard</h3>
+                <p class="signal-content">Built CircuitGuard for Infosys Springboard internship. Benchmarked ResNet-50 vs EfficientNet-B4 on PCB defect datasets. Selected as National Finalist at IIM Indore.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Active Deployments (Experience) -->
+          <div class="deployments-section">
+            <div class="deployments-header">
+              <span class="briefing-marker">▸</span> ACTIVE DEPLOYMENTS
+            </div>
+
+            <div class="deployment-card reveal-element">
+              <div class="deployment-period">2025 — PRESENT</div>
+              <h3 class="deployment-role">Founding AI Engineer</h3>
+              <div class="deployment-org">Stealth AI Startup</div>
+              <p class="deployment-desc">Architecting real-time computer vision pipelines processing 10+ RTSP camera streams concurrently. Designing low-latency object detection and occupancy analytics engines using YOLOv8 and ByteTrack. Implementing asynchronous FastAPI endpoints and Redis queues to stream real-time analytics to clients.</p>
+            </div>
+
+            <div class="deployment-card reveal-element">
+              <div class="deployment-period">2025 — PRESENT</div>
+              <h3 class="deployment-role">Campus Co-Lead</h3>
+              <div class="deployment-org">µLearn GCEK · Kannur</div>
+              <p class="deployment-desc">Spearheading technical community operations and leading the organization of "Build with AI - Kannur 2026" hackathon (50+ participants).</p>
+            </div>
+
+            <div class="deployment-card reveal-element">
+              <div class="deployment-period">2024</div>
+              <h3 class="deployment-role">AI/ML Intern</h3>
+              <div class="deployment-org">Infosys Springboard · Remote</div>
+              <p class="deployment-desc">Developed CircuitGuard — an automated PCB defect detection system using EfficientNet-B4 and OpenCV. Trained on manufacturing imagery across 6 defect categories, achieving 98% accuracy. Selected as national finalist at IIM Indore hackathon.</p>
+            </div>
+
+            <div class="deployment-card reveal-element">
+              <div class="deployment-period">2023 — PRESENT</div>
+              <h3 class="deployment-role">B.Tech Computer Science</h3>
+              <div class="deployment-org">Government College of Engineering, Kannur</div>
+              <p class="deployment-desc">Focusing on operating systems, computer architecture, databases, and algorithm analysis.</p>
+            </div>
+          </div>
+
+          <!-- Credentials -->
+          <div class="credentials-section">
+            <div class="credentials-header">
+              <span class="briefing-marker">▸</span> CREDENTIALS VERIFIED
+            </div>
+            <div class="credentials-list">
+              <div class="credential-item reveal-element">
+                <span class="credential-year">2026</span>
+                <span class="credential-name">AWS AI & ML Scholars Program</span>
+                <span class="credential-badge">ACTIVE</span>
+              </div>
+              <div class="credential-item reveal-element">
+                <span class="credential-year">2025</span>
+                <span class="credential-name">Google × Kaggle AI Agents Intensive</span>
+                <span class="credential-badge">CAPSTONE</span>
+              </div>
+              <div class="credential-item reveal-element">
+                <span class="credential-year">2025</span>
+                <span class="credential-name">Snowflake BUILD Asia Pacific</span>
+                <span class="credential-badge">SELECTED</span>
+              </div>
+              <div class="credential-item reveal-element">
+                <span class="credential-year">2024</span>
+                <span class="credential-name">National Hackathon Finalist</span>
+                <span class="credential-badge">IIM INDORE</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── MODULE: SYSTEMS ── -->
+      <section id="module-systems" class="console-module" aria-label="Systems manifest">
+        <div class="module-container">
+
+          <div class="module-header">
+            <div class="module-label">
+              <span class="module-number">04</span>
+              <span class="module-separator">//</span>
+              <span class="module-name">SYSTEMS MANIFEST</span>
+            </div>
+            <div class="module-line"></div>
+          </div>
+
+          <div class="systems-grid">
+            <div class="system-subsystem reveal-element">
+              <div class="subsystem-header">
+                <span class="subsystem-status"></span>
+                <span class="subsystem-name">CORE LANGUAGES</span>
+              </div>
+              <div class="subsystem-components">
+                <span class="component-tag">Python</span>
+                <span class="component-tag">C</span>
+                <span class="component-tag">POSIX Shell</span>
+                <span class="component-tag">SQL</span>
+              </div>
+            </div>
+            <div class="system-subsystem reveal-element">
+              <div class="subsystem-header">
+                <span class="subsystem-status"></span>
+                <span class="subsystem-name">AI & COMPUTER VISION</span>
+              </div>
+              <div class="subsystem-components">
+                <span class="component-tag">PyTorch</span>
+                <span class="component-tag">OpenCV</span>
+                <span class="component-tag">YOLOv8</span>
+                <span class="component-tag">ByteTrack</span>
+                <span class="component-tag">EfficientNet</span>
+                <span class="component-tag">HuggingFace</span>
+              </div>
+            </div>
+            <div class="system-subsystem reveal-element">
+              <div class="subsystem-header">
+                <span class="subsystem-status"></span>
+                <span class="subsystem-name">BACKEND & VECTORS</span>
+              </div>
+              <div class="subsystem-components">
+                <span class="component-tag">FastAPI</span>
+                <span class="component-tag">ChromaDB</span>
+                <span class="component-tag">PostgreSQL</span>
+                <span class="component-tag">Redis</span>
+                <span class="component-tag">LangGraph</span>
+                <span class="component-tag">LangChain</span>
+              </div>
+            </div>
+            <div class="system-subsystem reveal-element">
+              <div class="subsystem-header">
+                <span class="subsystem-status"></span>
+                <span class="subsystem-name">INFRASTRUCTURE</span>
+              </div>
+              <div class="subsystem-components">
+                <span class="component-tag">Linux</span>
+                <span class="component-tag">Docker</span>
+                <span class="component-tag">Git</span>
+                <span class="component-tag">GitHub Actions</span>
+                <span class="component-tag">AWS</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ── MODULE: TRANSMISSION ── -->
+      <section id="module-transmission" class="console-module" aria-label="Contact transmission">
+        <div class="module-container">
+
+          <div class="module-header">
+            <div class="module-label">
+              <span class="module-number">05</span>
+              <span class="module-separator">//</span>
+              <span class="module-name">TRANSMISSION TERMINAL</span>
+            </div>
+            <div class="module-line"></div>
+          </div>
+
+          <div class="transmission-content">
+            <div class="transmission-prompt">
+              <h2 class="transmission-heading">Have a hard engineering problem?</h2>
+              <p class="transmission-subtext">Open a channel.</p>
+            </div>
+
+            <a href="mailto:codewithkarthii@gmail.com" class="transmission-button" id="transmission-btn">
+              <span class="transmission-btn-icon">▸</span>
+              <span class="transmission-btn-text">codewithkarthii@gmail.com</span>
+              <span class="transmission-btn-pulse" aria-hidden="true"></span>
+            </a>
+
+            <div class="relay-stations">
+              <div class="relay-label">RELAY STATIONS</div>
+              <div class="relay-links">
+                <a href="https://github.com/K4rthik14" target="_blank" rel="noreferrer" class="relay-link">
+                  <span class="relay-icon">◈</span> GitHub
+                </a>
+                <a href="https://linkedin.com/in/karthik-k4" target="_blank" rel="noreferrer" class="relay-link">
+                  <span class="relay-icon">◈</span> LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer -->
+          <footer class="console-footer">
+            <div class="footer-row">
+              <span class="footer-location">Karthik · Kasaragod, Kerala</span>
+              <span class="footer-signature">// Built from scratch. Every pixel intentional.</span>
+            </div>
+          </footer>
+
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="engine.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
