@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --font-sans: var(--font-inter), sans-serif;
   --font-heading: var(--font-geist-sans), sans-serif;
@@ -7,13 +9,18 @@
 }
 
 :root {
-  --background: #090909;
-  --foreground: #f4f4f5;
+  --scrollbar-track: #fafafa;
+  --scrollbar-thumb: #d4d4d8;
+  --scrollbar-thumb-hover: #a1a1aa;
+}
+
+.dark {
+  --scrollbar-track: #090909;
+  --scrollbar-thumb: #27272a;
+  --scrollbar-thumb-hover: #3f3f46;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
   font-family: var(--font-sans);
   overflow-x: hidden;
 }
@@ -28,14 +35,14 @@ h1, h2, h3, h4, h5, h6 {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #090909;
+  background: var(--scrollbar-track);
 }
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
+  background: var(--scrollbar-thumb);
   border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: var(--scrollbar-thumb-hover);
 }
 
 /* Base utility classes for smooth animations and transitions */
