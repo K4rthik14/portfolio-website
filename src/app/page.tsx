@@ -856,7 +856,7 @@ export default function Home() {
           className="px-8 py-4 bg-white text-black font-semibold rounded hover:bg-zinc-200 transition-colors inline-flex items-center gap-2 shadow-sm text-base"
         >
           <Mail className="w-4 h-4" />
-          codewithkarthii@gmail.com
+          karthik1000x@gmail.com
         </a>
 
         <div className="flex gap-6 mt-12 text-zinc-400 text-sm font-mono">
