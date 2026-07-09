@@ -1,42 +1,42 @@
-# My Portfolio (Systems & AI)
+# Karthik S — Applied AI Engineer Portfolio
 
-A high-performance, recruiter-ready developer portfolio built with a focus on **Systems Engineering** and **Agentic AI**. This project implements a premium dark-themed interface with glassmorphism aesthetics and custom interactive features.
+A premium, minimalist, and production-oriented developer portfolio built with Next.js (App Router), TypeScript, Tailwind CSS, and Framer Motion. Inspired by the design aesthetics of industry leaders like Vercel, Linear, and Apple.
 
-## 🚀 Key Features
+## 🛠️ Tech Stack & Architecture
 
-- **System Insight Terminal**: An interactive, terminal-style log for every project that reveals technical deep-dives and "agentic" progress logs with a typewriter effect.
-- **Strategic Project Storytelling**: Projects are presented using a rigorous Problem-Solution-Impact framework to clearly communicate technical value.
-- **Technical Arsenal**: Categorized skill sections (Core CS, Intelligent Systems, Tools) for better scannability.
-- **High-End UI/UX**:
-  - Custom **Cursor Glow** effect.
-  - **Staggered Entry Animations** using Intersection Observer.
-  - Premium **Glassmorphism** card system.
-  - Responsive **GitHub Stats** integration.
+- **Framework:** [Next.js 16 (App Router)](https://nextjs.org/)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Typography:** Geist Sans (Headings) & Inter (Body)
+- **Deployment Ready:** Configured for Vercel and static hosting
 
-## 🛠️ Technical Stack
+## ✨ Design Principles & Refactor Highlights
 
-- **Structure**: Semantic HTML5
-- **Styling**: Modern CSS3 (Vanilla)
-  - Custom Properties (Variables) for themed design.
-  - Complex CSS Grid and Flexbox layouts.
-  - CSS Keyframe animations.
-- **Logic**: Vanilla JavaScript
-  - Intersection Observer API for scroll animations.
-  - Custom event handling for interactive modals.
-  - Asynchronous typewriter effects.
+1. **Serious Software Engineer Aesthetic:** Shifted away from the legacy "cyberpunk console" look to a clean, professional, and dark-mode first design focused on whitespace, precise typography, and hierarchy.
+2. **Hero Image Overlay:** Utilizes a subtle 30% dark overlay on the custom landscape background to ensure high readability while maintaining natural textures.
+3. **Interactive Project Deep Dives:** Provides alternating project layouts with custom-generated high-fidelity dark-themed system mockups, accompanied by expandable accordions showing objective, approach, complications, debriefs, and text-based system architecture diagrams.
+4. **Active Deployments & Signals:** Features a structured experience timeline alongside a chronological signal log tracking build logs, academic studies, and deployments.
+5. **No Placeholders:** All assets (project preview images and hero background) are high-quality, real-world assets.
 
-## 📂 Structure
+## 🚀 Running Locally
 
-```text
-├── index.html     # Main structure and content
-├── style.css      # Custom design system and components
-├── script.js      # Core logic and interactivity
-└── README.md      # Technical documentation
+Clone the repository and install dependencies:
+
+```bash
+npm install
 ```
 
-## 🧠 Design Philosophy
+Start the development server:
 
-The portfolio is designed to mimic a high-performance system interface. By combining a dark color palette with vibrant neon gradients (Purple/Blue), it communicates a balance between stable systems engineering and modern AI innovation.
+```bash
+npm run dev
+```
 
----
-Built with &hearts; by Karthik
+Open [http://localhost:3000](http://localhost:3000) in your browser to inspect the application.
+
+To build the static application:
+
+```bash
+npm run build
+```
