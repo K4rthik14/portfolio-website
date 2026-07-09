@@ -302,14 +302,13 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen bg-[#090909] text-zinc-100 flex flex-col font-sans select-none">
-      
+
       {/* ═══ NAVIGATION ═══ */}
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          isScrolled
-            ? "bg-[#090909]/75 backdrop-blur-md border-b border-zinc-900/60 py-3"
-            : "bg-transparent py-5"
-        }`}
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isScrolled
+          ? "bg-[#090909]/75 backdrop-blur-md border-b border-zinc-900/60 py-3"
+          : "bg-transparent py-5"
+          }`}
       >
         <div className="max-w-5xl mx-auto px-6 flex items-center justify-between">
           <a href="#" className="font-heading font-semibold text-lg tracking-tight hover:text-blue-400 transition-colors">
@@ -498,9 +497,8 @@ export default function Home() {
               >
                 {/* Text Side */}
                 <div
-                  className={`flex flex-col w-full lg:col-span-6 ${
-                    isEven ? "lg:order-1" : "lg:order-2"
-                  }`}
+                  className={`flex flex-col w-full lg:col-span-6 ${isEven ? "lg:order-1" : "lg:order-2"
+                    }`}
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <span className="font-mono text-[11px] text-zinc-500 tracking-wider">PROJECT 0{index + 1}</span>
@@ -561,9 +559,8 @@ export default function Home() {
 
                 {/* Image Side */}
                 <div
-                  className={`w-full lg:col-span-6 flex items-center justify-center ${
-                    isEven ? "lg:order-2" : "lg:order-1"
-                  }`}
+                  className={`w-full lg:col-span-6 flex items-center justify-center ${isEven ? "lg:order-2" : "lg:order-1"
+                    }`}
                 >
                   <div className="relative w-full aspect-square max-w-[420px] rounded-lg border border-zinc-800/80 bg-zinc-950 overflow-hidden shadow-md group">
                     <Image
@@ -724,7 +721,7 @@ export default function Home() {
             <div key={signal.title + index} className="relative group">
               {/* Dot */}
               <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-2 h-2 rounded-full bg-zinc-800 border border-zinc-950 group-hover:bg-blue-400 group-hover:shadow-[0_0_8px_rgba(59,130,246,0.5)] transition-all duration-300" />
-              
+
               <div className="flex flex-col items-start">
                 <span className="font-mono text-[10px] text-zinc-500 tracking-wider mb-2">{signal.date}</span>
                 <span className="px-2 py-0.5 bg-blue-500/5 border border-blue-500/10 text-blue-400 font-mono text-[9px] rounded mb-3">
@@ -750,7 +747,7 @@ export default function Home() {
             <div>
               <span className="font-mono text-xs text-blue-400 tracking-[0.25em] uppercase block mb-3">05 // OPERATOR</span>
               <h2 className="font-heading text-3xl font-normal text-white mb-4">Operator Briefing</h2>
-              
+
               <div className="bg-[#0b0b0c] border border-zinc-900 p-6 rounded mb-8">
                 <div className="flex justify-between items-center text-[10px] font-mono text-zinc-500 mb-6 border-b border-zinc-900 pb-3">
                   <span>CLASSIFICATION: BUILDER</span>
@@ -759,10 +756,10 @@ export default function Home() {
                     ACTIVE
                   </span>
                 </div>
-                
+
                 <h3 className="font-heading text-2xl font-normal text-zinc-100 mb-2">Karthik</h3>
                 <p className="font-mono text-xs text-blue-400 mb-6">Founding AI Engineer · Stealth Startup</p>
-                
+
                 <div className="flex flex-col gap-2.5 text-xs text-zinc-400">
                   <div className="flex items-center gap-2">
                     <MapPin className="w-3.5 h-3.5 text-zinc-500" />
@@ -855,7 +852,7 @@ export default function Home() {
         <p className="text-zinc-500 text-sm mb-10 max-w-md">Open a channel. Let&apos;s build stable solutions.</p>
 
         <a
-          href="mailto:codewithkarthii@gmail.com"
+          href="mailto:karthik1000x@gmail.com"
           className="px-8 py-4 bg-white text-black font-semibold rounded hover:bg-zinc-200 transition-colors inline-flex items-center gap-2 shadow-sm text-base"
         >
           <Mail className="w-4 h-4" />
